@@ -172,26 +172,38 @@ body{
     margin-bottom:15px;
 }
 
-/* Projects */
-
-.projects{
-    background:#f5f5f5;
-}
-
 .project-card{
     border:none;
-    border-radius:20px;
-    transition:.4s;
+    border-radius:18px;
+    background:white;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    transition:all 0.3s ease;
+    overflow:hidden;
+    text-align:center;
+    padding:10px;
 }
 
 .project-card:hover{
     transform:translateY(-10px);
-    box-shadow:0 15px 30px rgba(0,0,0,.1);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
 }
 
-.project-icon{
-    font-size:60px;
-    color:var(--gold);
+/* Card title */
+.project-card h5{
+    font-weight:700;
+    color:#0A192F;
+    margin-bottom:10px;
+}
+
+/* Card text */
+.project-card p{
+    font-size:14px;
+    color:#666;
+}
+
+/* Button inside card */
+.project-card .btn-custom{
+    margin-top:10px;
 }
 
 /* Contact */
@@ -414,82 +426,200 @@ I love creating responsive, modern and user-friendly web applications.
 
 <!-- Projects -->
 
-<section id="projects" class="section-padding projects">
+<section id="projects" class="section">
 
 <div class="container">
 
-<div class="section-title">
-<h2>Projects</h2>
-</div>
+<h2 class="section-title">
+Projects
+</h2>
 
-<div class="row g-4">
 
-<!-- Project 1 -->
 
-<div class="col-md-4">
-<div class="card project-card h-100">
-<div class="card-body text-center">
 
-<i class="fas fa-vote-yea project-icon"></i>
-
-<h4 class="mt-3">College Election System</h4>
-
-<p>Online Voting System using PHP & MySQL.</p>
-
-<a href="https://amrutha.byethost14.com/voter_management/index.php"
-   class="btn btn-custom mt-2">
-   View Project
-</a>
-
-</div>
-</div>
-</div>
-
-<!-- Project 2 -->
 
 <div class="col-md-4">
-<div class="card project-card h-100">
-<div class="card-body text-center">
 
-<i class="fas fa-user-graduate project-icon"></i>
+    <div class="card project-card">
 
-<h4 class="mt-3">Student Management</h4>
+        <div class="card-body">
 
-<p>Student Attendance & Records Management.</p>
+            <h5>More Projects</h5>
 
-<a href="https://amrutha.byethost14.com/sms1/index.php"
-   class="btn btn-custom mt-2">
-   View Project
-</a>
+            <p>
+                Explore all my web development projects and applications.
+            </p>
 
-</div>
-</div>
-</div>
+            <button class="btn btn-custom"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreProjectsModal">
+                View Details
+            </button>
 
-<!-- Project 3 -->
+        </div>
 
-<div class="col-md-4">
-<div class="card project-card h-100">
-<div class="card-body text-center">
-
-<i class="fas fa-laptop-code project-icon"></i>
-
-<h4 class="mt-3">Portfolio Website</h4>
-
-<p>Responsive Personal Portfolio Website.</p>
-
-<a href="#home"
-   class="btn btn-custom mt-2">
-   View Project
-</a>
+    </div>
 
 </div>
 </div>
-</div>
+<!-- More Projects Modal -->
+
+<div class="modal fade" id="moreProjectsModal" tabindex="-1">
+
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    My Projects
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+<ul class="list-group">
+
+<li class="list-group-item d-flex justify-content-between align-items-center">
+    Student Management System
+    <a href="https://amruth.byethost14.com/sms1/"
+       target="_blank"
+       class="btn btn-sm btn-custom">
+       View project
+    </a>
+</li>
+
+<li class="list-group-item d-flex justify-content-between align-items-center">
+    Online Voting System
+    <a href="https://amrutha.byethost14.com/voter_managrment/"
+       target="_blank"
+       class="btn btn-sm btn-custom">
+       View project
+    </a>
+</li>
+
+<li class="list-group-item d-flex justify-content-between align-items-center">
+    Student Marks Management System
+    <a href="https://amrutha.byethost14.com/student_marks/"
+       target="_blank"
+       class="btn btn-sm btn-custom">
+       View project
+    </a>
+</li>
+
+<li class="list-group-item d-flex justify-content-between align-items-center">
+    Student Marks Add & Edit System
+    <a href="https://amrutha.byethost14.com/student_mark2/"
+       target="_blank"
+       class="btn btn-sm btn-custom">
+       View project
+    </a>
+</li>
+
+<li class="list-group-item d-flex justify-content-between align-items-center">
+    Personal Portfolio Website
+    <a href="https://amrutha.byethost14.com/projects/"
+       target="_blank"
+       class="btn btn-sm btn-custom">
+       View project
+    </a>
+</li>
+
+<li class="list-group-item d-flex justify-content-between align-items-center">
+    To-Do Application
+    <a href="https://amrutha.byethost14.com/project2/"
+       target="_blank"
+       class="btn btn-sm btn-custom">
+       View project
+    </a>
+</li>
+
+<li class="list-group-item d-flex justify-content-between align-items-center">
+    Calculator
+    <a href="https://amrutha.byethost14.com/project3/"
+       target="_blank"
+       class="btn btn-sm btn-custom">
+       View project
+    </a>
+</li>
+
+<li class="list-group-item d-flex justify-content-between align-items-center">
+    Digital Clock
+    <a href="https://amrutha.byethost14.com/project4/"
+       target="_blank"
+       class="btn btn-sm btn-custom">
+       View project
+    </a>
+</li>
+
+<li class="list-group-item d-flex justify-content-between align-items-center">
+    Stopwatch
+    <a href="https://amrutha.byethost14.com/project5/"
+       target="_blank"
+       class="btn btn-sm btn-custom">
+       View project
+    </a>
+</li>
+
+<li class="list-group-item d-flex justify-content-between align-items-center">
+    BMI Calculator
+    <a href="https://amrutha.byethost14.com/project6/"
+       target="_blank"
+       class="btn btn-sm btn-custom">
+       View project
+    </a>
+</li>
+
+<li class="list-group-item d-flex justify-content-between align-items-center">
+    Student Score Calculation System
+    <a href="https://amrutha.byethost14.com/project7/"
+       target="_blank"
+       class="btn btn-sm btn-custom">
+       View project
+    </a>
+</li>
+
+<li class="list-group-item d-flex justify-content-between align-items-center">
+    Student Group Generator
+    <a href="https://amrutha.byethost14.com/project8/"
+       target="_blank"
+       class="btn btn-sm btn-custom">
+       View project
+    </a>
+</li>
+
+</ul>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
-</div>
+</section>
+
+
+
+</section>
+```
+
 
 </section>
 <!-- Contact -->
