@@ -7,10 +7,17 @@
 <title>Amrutha Suresh | Portfolio</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
 <style>
+
+:root{
+    --gold:#D4AF37;
+    --gold-light:#F4D03F;
+    --dark:#0A192F;
+    --dark2:#112240;
+    --white:#ffffff;
+}
 
 html{
     scroll-behavior:smooth;
@@ -18,40 +25,78 @@ html{
 
 body{
     font-family:'Segoe UI',sans-serif;
-    color:#1E293B;
     overflow-x:hidden;
+    background:#f8f9fa;
 }
 
 /* Navbar */
+
 .navbar{
-    background:#0F172A !important;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    background:var(--dark)!important;
 }
 
 .navbar-brand{
-    font-size:1.6rem;
+    color:var(--gold)!important;
+    font-size:1.8rem;
     font-weight:700;
-    color:#fff !important;
 }
 
 .nav-link{
-    color:white !important;
-    font-weight:500;
+    color:white!important;
     margin-left:15px;
 }
 
 .nav-link:hover{
-    color:#3B82F6 !important;
+    color:var(--gold)!important;
 }
 
-/* Hero Section */
+/* Hero */
+
 .hero{
     min-height:100vh;
+    background:linear-gradient(135deg,#0A192F,#112240);
+    color:white;
     display:flex;
     align-items:center;
-    background:linear-gradient(135deg,#0F172A,#1E293B);
-    color:white;
+    justify-content:center;
     text-align:center;
+    position:relative;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(212,175,55,.08);
+    top:-150px;
+    right:-150px;
+}
+
+.hero::after{
+    content:'';
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:rgba(212,175,55,.08);
+    bottom:-100px;
+    left:-100px;
+}
+
+.profile-img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid var(--gold);
+    box-shadow:0 0 40px rgba(212,175,55,.5);
+    transition:.4s;
+}
+
+.profile-img:hover{
+    transform:scale(1.05);
 }
 
 .hero h1{
@@ -59,26 +104,23 @@ body{
     font-weight:700;
 }
 
-.hero p{
-    font-size:1.3rem;
-    margin-top:15px;
+.hero h3{
+    color:var(--gold);
 }
 
 .hero-btn{
-    margin-top:25px;
-    background:#3B82F6;
+    background:linear-gradient(45deg,var(--gold),var(--gold-light));
     border:none;
+    color:var(--dark);
     padding:12px 30px;
-    font-size:18px;
-}
-
-.hero-btn:hover{
-    background:#2563EB;
+    border-radius:50px;
+    font-weight:600;
 }
 
 /* Section */
+
 .section-padding{
-    padding:100px 0;
+    padding:90px 0;
 }
 
 .section-title{
@@ -88,125 +130,160 @@ body{
 
 .section-title h2{
     font-weight:700;
-    color:#0F172A;
+    color:var(--dark);
 }
 
-.section-title p{
-    color:#64748B;
+.section-title h2::after{
+    content:'';
+    width:80px;
+    height:4px;
+    background:var(--gold);
+    display:block;
+    margin:10px auto;
 }
 
 /* About */
-.about-img{
+
+.about-box{
+    background:white;
+    padding:40px;
     border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+/* Skills */
+
+.skill-box{
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.skill-box:hover{
+    transform:translateY(-10px);
+}
+
+.skill-box i{
+    font-size:55px;
+    color:var(--gold);
+    margin-bottom:15px;
 }
 
 /* Projects */
+
 .projects{
-    background:#F8FAFC;
+    background:#f5f5f5;
 }
 
 .project-card{
     border:none;
-    border-radius:15px;
-    transition:0.3s;
+    border-radius:20px;
+    transition:.4s;
 }
 
 .project-card:hover{
     transform:translateY(-10px);
-    box-shadow:0 15px 30px rgba(0,0,0,0.1);
+    box-shadow:0 15px 30px rgba(0,0,0,.1);
 }
 
 .project-icon{
-    font-size:50px;
-    color:#3B82F6;
-}
-
-/* Skills */
-.skill-box{
-    text-align:center;
-    padding:20px;
-}
-
-.skill-box i{
-    font-size:50px;
-    color:#3B82F6;
-    margin-bottom:15px;
+    font-size:60px;
+    color:var(--gold);
 }
 
 /* Contact */
+
 .contact-box{
     background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
 .form-control{
     padding:12px;
 }
 
+.form-control:focus{
+    box-shadow:none;
+    border-color:var(--gold);
+}
+
 .btn-custom{
-    background:#3B82F6;
-    color:white;
+    background:linear-gradient(45deg,var(--gold),var(--gold-light));
+    color:var(--dark);
     border:none;
+    padding:10px 25px;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
 }
 
 .btn-custom:hover{
-    background:#2563EB;
-    color:white;
+    color:var(--dark);
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(212,175,55,.4);
 }
 
 /* Footer */
+
 footer{
-    background:#0F172A;
+    background:var(--dark);
     color:white;
-    padding:25px 0;
+    padding:30px 0;
 }
 
 .social-icons a{
     color:white;
     margin:0 10px;
-    font-size:20px;
-    text-decoration:none;
+    font-size:22px;
 }
 
 .social-icons a:hover{
-    color:#3B82F6;
+    color:var(--gold);
 }
+
+/* Mobile */
 
 @media(max-width:768px){
 
 .hero h1{
-    font-size:2.7rem;
+    font-size:2.5rem;
 }
 
-.hero p{
-    font-size:1rem;
+.profile-img{
+    width:170px;
+    height:170px;
 }
 
 }
 
 </style>
+
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 <div class="container">
 
 <a class="navbar-brand" href="#">
-    Amrutha
+Amrutha Suresh
 </a>
 
 <button class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav">
-    <span class="navbar-toggler-icon"></span>
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
 </button>
 
-<div class="collapse navbar-collapse" id="navbarNav">
+<div class="collapse navbar-collapse" id="menu">
 
 <ul class="navbar-nav ms-auto">
 
@@ -216,6 +293,10 @@ footer{
 
 <li class="nav-item">
 <a class="nav-link" href="#about">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#skills">Skills</a>
 </li>
 
 <li class="nav-item">
@@ -231,21 +312,25 @@ footer{
 </div>
 
 </div>
-
 </nav>
 
 <!-- Hero -->
+
 <section id="home" class="hero">
 
 <div class="container">
 
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCwT6mIoiOvxHfm3jilDSSQh5Dg61V88uJ3w&s" class="profile-img mb-4">
+
 <h1>Amrutha Suresh</h1>
 
-<p>
-Full Stack Developer • UI Designer • Technology Enthusiast
+<h3>Full Stack Developer</h3>
+
+<p class="mt-3">
+Building Modern Websites & Web Applications
 </p>
 
-<a href="#projects" class="btn hero-btn">
+<a href="#projects" class="btn hero-btn mt-3">
 View My Work
 </a>
 
@@ -254,138 +339,26 @@ View My Work
 </section>
 
 <!-- About -->
+
 <section id="about" class="section-padding">
 
 <div class="container">
 
 <div class="section-title">
 <h2>About Me</h2>
-<p>Get to know me better</p>
 </div>
 
-<div class="row align-items-center">
+<div class="about-box">
 
-<div class="col-lg-5 mb-4">
+<h3>Hello, I'm Amrutha 👋</h3>
 
-<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800"
-     class="img-fluid about-img shadow"
-     alt="Profile">
-
-</div>
-
-<div class="col-lg-7">
-
-<h3>Hello, I'm Amrutha</h3>
-
-<p class="mt-3">
-I am a passionate web developer with experience in HTML, CSS,
-Bootstrap, JavaScript, PHP, and MySQL. I enjoy building responsive
-and user-friendly web applications that solve real-world problems.
+<p>
+I am a passionate Full Stack Developer skilled in HTML, CSS, Bootstrap, JavaScript, PHP and MySQL.
 </p>
 
 <p>
-I continuously learn new technologies and improve my skills through
-practical projects and development challenges.
+I love creating responsive, modern and user-friendly web applications.
 </p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Projects -->
-<section id="projects" class="section-padding projects">
-
-<div class="container">
-
-<div class="section-title">
-<h2>Projects</h2>
-<p>Some of my recent works</p>
-</div>
-
-<div class="row">
-
-<div class="col-md-4 mb-4">
-
-<div class="card project-card h-100">
-
-<div class="card-body text-center">
-
-<i class="fas fa-vote-yea project-icon"></i>
-
-<h4 class="mt-3">
-College Election System
-</h4>
-
-<p>
-Online voting platform using PHP, MySQL and Bootstrap with secure
-voter authentication.
-</p>
-
-<button class="btn btn-primary">
-View Project
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-md-4 mb-4">
-
-<div class="card project-card h-100">
-
-<div class="card-body text-center">
-
-<i class="fas fa-user-graduate project-icon"></i>
-
-<h4 class="mt-3">
-Student Management
-</h4>
-
-<p>
-Manage student records, attendance, reports and academic details.
-</p>
-
-<button class="btn btn-primary">
-View Project
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-md-4 mb-4">
-
-<div class="card project-card h-100">
-
-<div class="card-body text-center">
-
-<i class="fas fa-laptop-code project-icon"></i>
-
-<h4 class="mt-3">
-Portfolio Website
-</h4>
-
-<p>
-Responsive portfolio website showcasing personal projects and skills.
-</p>
-
-<button class="btn btn-primary">
-View Project
-</button>
-
-</div>
-
-</div>
-
-</div>
 
 </div>
 
@@ -394,39 +367,39 @@ View Project
 </section>
 
 <!-- Skills -->
-<section class="section-padding">
+
+<section id="skills" class="section-padding">
 
 <div class="container">
 
 <div class="section-title">
 <h2>Skills</h2>
-<p>Technologies I work with</p>
 </div>
 
-<div class="row">
+<div class="row g-4">
 
-<div class="col-md-3 col-6">
+<div class="col-md-3">
 <div class="skill-box">
 <i class="fab fa-html5"></i>
 <h5>HTML5</h5>
 </div>
 </div>
 
-<div class="col-md-3 col-6">
+<div class="col-md-3">
 <div class="skill-box">
 <i class="fab fa-css3-alt"></i>
 <h5>CSS3</h5>
 </div>
 </div>
 
-<div class="col-md-3 col-6">
+<div class="col-md-3">
 <div class="skill-box">
 <i class="fab fa-bootstrap"></i>
 <h5>Bootstrap</h5>
 </div>
 </div>
 
-<div class="col-md-3 col-6">
+<div class="col-md-3">
 <div class="skill-box">
 <i class="fab fa-php"></i>
 <h5>PHP</h5>
@@ -439,19 +412,95 @@ View Project
 
 </section>
 
+<!-- Projects -->
+
+<section id="projects" class="section-padding projects">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Projects</h2>
+</div>
+
+<div class="row g-4">
+
+<!-- Project 1 -->
+
+<div class="col-md-4">
+<div class="card project-card h-100">
+<div class="card-body text-center">
+
+<i class="fas fa-vote-yea project-icon"></i>
+
+<h4 class="mt-3">College Election System</h4>
+
+<p>Online Voting System using PHP & MySQL.</p>
+
+<a href="college_election/index.php"
+   class="btn btn-custom mt-2">
+   View Project
+</a>
+
+</div>
+</div>
+</div>
+
+<!-- Project 2 -->
+
+<div class="col-md-4">
+<div class="card project-card h-100">
+<div class="card-body text-center">
+
+<i class="fas fa-user-graduate project-icon"></i>
+
+<h4 class="mt-3">Student Management</h4>
+
+<p>Student Attendance & Records Management.</p>
+
+<a href="student_management/index.php"
+   class="btn btn-custom mt-2">
+   View Project
+</a>
+
+</div>
+</div>
+</div>
+
+<!-- Project 3 -->
+
+<div class="col-md-4">
+<div class="card project-card h-100">
+<div class="card-body text-center">
+
+<i class="fas fa-laptop-code project-icon"></i>
+
+<h4 class="mt-3">Portfolio Website</h4>
+
+<p>Responsive Personal Portfolio Website.</p>
+
+<a href="#home"
+   class="btn btn-custom mt-2">
+   View Project
+</a>
+
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
 <!-- Contact -->
-<section id="contact" class="section-padding bg-light">
+
+<section id="contact" class="section-padding">
 
 <div class="container">
 
 <div class="section-title">
 <h2>Contact Me</h2>
-<p>Let's work together</p>
 </div>
-
-<div class="row justify-content-center">
-
-<div class="col-lg-8">
 
 <div class="contact-box">
 
@@ -460,33 +509,20 @@ View Project
 <div class="row">
 
 <div class="col-md-6 mb-3">
-<input type="text"
-       class="form-control"
-       placeholder="Your Name">
+<input type="text" class="form-control" placeholder="Your Name">
 </div>
 
 <div class="col-md-6 mb-3">
-<input type="email"
-       class="form-control"
-       placeholder="Your Email">
+<input type="email" class="form-control" placeholder="Your Email">
 </div>
 
 </div>
 
 <div class="mb-3">
-<input type="text"
-       class="form-control"
-       placeholder="Subject">
+<textarea rows="5" class="form-control" placeholder="Your Message"></textarea>
 </div>
 
-<div class="mb-3">
-<textarea class="form-control"
-          rows="5"
-          placeholder="Your Message"></textarea>
-</div>
-
-<button type="submit"
-        class="btn btn-custom">
+<button class="btn btn-custom">
 Send Message
 </button>
 
@@ -496,13 +532,10 @@ Send Message
 
 </div>
 
-</div>
-
-</div>
-
 </section>
 
 <!-- Footer -->
+
 <footer>
 
 <div class="container text-center">
@@ -516,8 +549,8 @@ Send Message
 
 </div>
 
-<p class="mb-0">
-© 2026 Amrutha Suresh. All Rights Reserved.
+<p>
+© 2026 Amrutha Suresh | All Rights Reserved
 </p>
 
 </div>
